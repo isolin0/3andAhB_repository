@@ -10,8 +10,8 @@ public class CatSpawner : MonoBehaviour
 	private GameObject catCopy;
 	private float timeBtwMove;
 	public float startTimeBtwMove = 3f;
-	private float timeOff;
-	public float startTimeOff = 3f;
+	//private float timeOff;
+	//public float startTimeOff = 3f;
 	public bool stopCatSpawn;
 	void Start()
 	{
@@ -22,7 +22,7 @@ public class CatSpawner : MonoBehaviour
 	{
 		if (timeBtwMove <= 0 && stopCatSpawn == false)
 		{
-			//Move();
+			
 			SpawnCat();
 			timeBtwMove = startTimeBtwMove;
 			stopCatSpawn = true;
@@ -35,14 +35,7 @@ public class CatSpawner : MonoBehaviour
 
 	}
 
-	private void Move()
-	{
-		SpawnCat();
-		//Debug.Log("entro");
-		int randPosition = Random.Range(0, startPosition.Length);
-		catCopy.transform.position = startPosition[randPosition].position;
-
-	}
+	
 
 	private void SpawnCat()
 	{

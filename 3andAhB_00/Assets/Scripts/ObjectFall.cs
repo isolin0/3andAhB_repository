@@ -9,6 +9,7 @@ public class ObjectFall : MonoBehaviour
 	public bool isMoving =false;
 
 
+
 	void Update()
 	{
 		if (fallTime <= 0 && isMoving)
@@ -22,7 +23,7 @@ public class ObjectFall : MonoBehaviour
 		}
 	}
 
-
+    
 	void OnTriggerEnter2D(Collider2D col)
 	{
 		if(col.tag == "cat")
@@ -31,10 +32,17 @@ public class ObjectFall : MonoBehaviour
 			isMoving = true;
 		}
 
-		if (col.tag == "dog")
-		{
-			//stop moving anim
-			isMoving = false;
-		}
+		
 	}
+
+    void OnTriggerStay2D(Collider2D col)
+    {
+       
+
+        if (col.tag == "dog")
+        {
+            //stop moving anim
+            isMoving = false;
+        }
+    }
 }
