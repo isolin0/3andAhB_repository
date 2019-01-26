@@ -40,9 +40,17 @@ public class CatSpawner : MonoBehaviour
 	private void SpawnCat()
 	{
 		int randStartPosition = Random.Range(0, startPosition.Length);
-		transform.position = startPosition[randStartPosition].position;
-		catCopy = GameObject.Instantiate(catPrefab, transform.position, Quaternion.identity) as GameObject;
-		StartCoroutine("CatAnimation");
+        if(startPosition[randStartPosition].position != null)
+        {
+
+            transform.position = startPosition[randStartPosition].position;
+        
+            catCopy = GameObject.Instantiate(catPrefab, transform.position, Quaternion.identity) as GameObject;
+            StartCoroutine("CatAnimation");
+        }
+        else 
+            SpawnCat();
+            
 
 	}
 
