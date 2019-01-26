@@ -9,38 +9,61 @@ public class CatSpawner : MonoBehaviour
 
 	private GameObject catCopy;
 	private float timeBtwMove;
-	public float startTimeBtwMove = 0.25f;
-	public bool stopCatMove;
+	public float startTimeBtwMove = 3f;
+	private float timeOff;
+	public float startTimeOff = 3f;
+	public bool stopCatSpawn;
 	void Start()
 	{
-		int randStartPosition = Random.Range(0, startPosition.Length);
-		transform.position = startPosition[randStartPosition].position;
-		catCopy = GameObject.Instantiate(catPrefab, transform.position, Quaternion.identity) as GameObject;
-
 		
 	}
 
 	void Update()
 	{
-		if (timeBtwMove <= 0 && stopCatMove == false)
+		if (timeBtwMove <= 0 && stopCatSpawn == false)
 		{
-			Move();
+			//Move();
+			SpawnCat();
 			timeBtwMove = startTimeBtwMove;
+			stopCatSpawn = true;
 		}
 		else
 		{
 			timeBtwMove -= Time.deltaTime;
 		}
+
+
 	}
 
 	private void Move()
 	{
-		Debug.Log("entro");
+		SpawnCat();
+		//Debug.Log("entro");
 		int randPosition = Random.Range(0, startPosition.Length);
 		catCopy.transform.position = startPosition[randPosition].position;
 
 	}
-	
+
+	private void SpawnCat()
+	{
+		int randStartPosition = Random.Range(0, startPosition.Length);
+		transform.position = startPosition[randStartPosition].position;
+		catCopy = GameObject.Instantiate(catPrefab, transform.position, Quaternion.identity) as GameObject;
+		StartCoroutine("CatAnimation");
+
+	}
+
+	IEnumerator CatAnimation()
+	{
+		yield return new WaitForSeconds(2);
+		Destroy(catCopy);
+		yield return new WaitForSeconds(3);
+		stopCatSpawn = false;
+		StopAllCoroutines();
+		yield return null;
+			
+	}
+
 
 
 }
