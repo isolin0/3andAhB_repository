@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 	private float moveInput;
 
 	public Rigidbody2D rb;
+	public Animator anim;
 
 	private bool facingRight = true;
 
@@ -30,14 +31,17 @@ public class PlayerController : MonoBehaviour
 		if (isGrounded == true)
 		{
 			extraJump = extraJumpValue;
+			anim.SetBool("isJumping", false);
 		}
 		if(Input.GetKeyDown(KeyCode.UpArrow)&& extraJump > 0)
 		{
 			rb.velocity = Vector2.up * jumpForce;
+			anim.SetBool("isJumping", true);
 			extraJump--;
 		}else if (Input.GetKeyDown(KeyCode.UpArrow) && extraJump == 0 && isGrounded==true)
 		{
 			rb.velocity = Vector2.up * jumpForce;
+			anim.SetBool("isJumping", true);
 		}
 	}
 
@@ -49,12 +53,13 @@ public class PlayerController : MonoBehaviour
 		isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
 		moveInput = Input.GetAxis("Horizontal");
+		anim.SetFloat("speed", Mathf.Abs(moveInput * speed));
 		rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
-		if(facingRight== false && moveInput < 0)
+		if(facingRight== false && moveInput > 0)
 		{
 			Flip();
-		}else if (facingRight== true && moveInput > 0)
+		}else if (facingRight== true && moveInput < 0)
 		{
 			Flip();
 		}
