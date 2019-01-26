@@ -62,6 +62,7 @@ public class ObjectFall : MonoBehaviour
 		if(col.tag == "floor")
         {
             rb.gravityScale = 0;
+            GameM.hpMax--;
         }
 
 
@@ -81,7 +82,7 @@ public class ObjectFall : MonoBehaviour
         {
             rb.gravityScale = 0;
             rb.velocity = Vector2.zero;
-            GameM.hpMax--;
+           
         }
 
 
