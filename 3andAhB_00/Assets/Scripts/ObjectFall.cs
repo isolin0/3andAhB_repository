@@ -36,15 +36,18 @@ public class ObjectFall : MonoBehaviour
     void fall()
     {
         rb.gravityScale = 2;
+
+        //Destroy object's spawner
         foreach (Transform child in transform)
         {
             GameObject.Destroy(child.gameObject);
         }
 
+
     }
 
 
-	void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D col)
 	{
 		if(col.tag == "cat")
 		{
@@ -55,18 +58,31 @@ public class ObjectFall : MonoBehaviour
             fallTime = startFallTime;
         }
 
-		
+		if(col.tag == "floor")
+        {
+            rb.gravityScale = 0;
+        }
+
+
 	}
 
     void OnTriggerStay2D(Collider2D col)
     {
        
 
-        if (col.tag == "dog")
+        if (col.tag == "dog" && Input.GetKeyDown(KeyCode.X))
         {
             //stop moving anim
             isMoving = false;
         }
+
+        if(col.tag == "floor")
+        {
+            rb.gravityScale = 0;
+            rb.velocity = Vector2.zero;
+        }
+
+
     }
 
 
@@ -76,3 +92,5 @@ public class ObjectFall : MonoBehaviour
 
 
 }
+
+

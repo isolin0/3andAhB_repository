@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 131442169}
   m_Layer: 8
   m_Name: FG (3)
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -532,6 +532,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Objeto (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 63079749, guid: ecb4581a9c28b4743a154096aa274c34, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.212
+      objectReference: {fileID: 0}
+    - target: {fileID: 63079749, guid: ecb4581a9c28b4743a154096aa274c34, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.143
+      objectReference: {fileID: 0}
     - target: {fileID: 5231772242247165001, guid: ecb4581a9c28b4743a154096aa274c34,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -586,14 +594,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 63079749, guid: ecb4581a9c28b4743a154096aa274c34, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.212
-      objectReference: {fileID: 0}
-    - target: {fileID: 63079749, guid: ecb4581a9c28b4743a154096aa274c34, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.143
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecb4581a9c28b4743a154096aa274c34, type: 3}
