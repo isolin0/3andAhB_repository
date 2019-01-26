@@ -30,18 +30,23 @@ public class PlayerController : MonoBehaviour
 	{
 		if (isGrounded == true)
 		{
+			
 			extraJump = extraJumpValue;
-			anim.SetBool("isJumping", false);
+			
 		}
 		if(Input.GetKeyDown(KeyCode.UpArrow)&& extraJump > 0)
 		{
-			rb.velocity = Vector2.up * jumpForce;
 			anim.SetBool("isJumping", true);
+			isGrounded = false;
+			rb.velocity = Vector2.up * jumpForce;
+			
 			extraJump--;
 		}else if (Input.GetKeyDown(KeyCode.UpArrow) && extraJump == 0 && isGrounded==true)
 		{
-			rb.velocity = Vector2.up * jumpForce;
 			anim.SetBool("isJumping", true);
+			isGrounded = false;
+			rb.velocity = Vector2.up * jumpForce;
+			
 		}
 	}
 
@@ -50,7 +55,7 @@ public class PlayerController : MonoBehaviour
 	void FixedUpdate()
     {
 
-		isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+		//isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
 		moveInput = Input.GetAxis("Horizontal");
 		anim.SetFloat("speed", Mathf.Abs(moveInput * speed));
@@ -72,5 +77,18 @@ public class PlayerController : MonoBehaviour
 		Scaler.x *= -1;
 		transform.localScale = Scaler;
 	
+	}
+	
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.gameObject.tag == "floor")
+		{
+			
+			anim.SetBool("isJumping", false);
+			isGrounded = true;
+		}
+			
+		
 	}
 }
