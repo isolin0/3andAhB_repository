@@ -13,6 +13,7 @@ public class ObjectFall : MonoBehaviour
     {
         fallTime = startFallTime;
         rb = GetComponent<Rigidbody2D>();
+        
     }
     void Update()
 	{
@@ -80,6 +81,7 @@ public class ObjectFall : MonoBehaviour
         {
             rb.gravityScale = 0;
             rb.velocity = Vector2.zero;
+            GameM.hpMax--;
         }
 
 
