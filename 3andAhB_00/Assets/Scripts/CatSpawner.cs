@@ -34,7 +34,6 @@ public class CatSpawner : MonoBehaviour
     {
        
         yield return new WaitForSeconds(3);
-        Debug.Log("pasa que entra el rutina");
         startSpawner = false;
         StopAllCoroutines();
         yield return null;
