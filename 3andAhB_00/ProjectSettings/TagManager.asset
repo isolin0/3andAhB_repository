@@ -8,7 +8,6 @@ TagManager:
   - cat
   - dog
   - floor
-  - superficie
   layers:
   - Default
   - TransparentFX
