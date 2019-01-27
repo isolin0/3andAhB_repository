@@ -40,7 +40,8 @@ public class ObjectFall : MonoBehaviour
 
     void fall()
     {
-        rb.gravityScale = 2;
+        rb.gravityScale = 1;
+        anim.SetBool("seCae", true);
 
         //Destroy object's spawner
         foreach (Transform child in transform)
@@ -57,7 +58,7 @@ public class ObjectFall : MonoBehaviour
 		if(col.tag == "cat")
 		{
             // start moving anim
-            
+            anim.SetBool("seMueve", true);
             isMoving = true;
             // start fall timer
             fallTime = startFallTime;
@@ -66,6 +67,7 @@ public class ObjectFall : MonoBehaviour
 		if(col.tag == "floor")
         {
             rb.gravityScale = 0;
+            anim.SetBool("seRompe", true);
             GameM.hpMax--;
         }
 
@@ -80,6 +82,7 @@ public class ObjectFall : MonoBehaviour
         {
             //stop moving anim
             isMoving = false;
+            anim.SetBool("seMueve", false);
         }
 
         if(col.tag == "floor")
