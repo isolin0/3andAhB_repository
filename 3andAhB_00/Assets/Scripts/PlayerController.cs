@@ -100,6 +100,7 @@ public class PlayerController : MonoBehaviour
 	public void Arregla()
 	{
 		anim.SetBool("arregla", true);
+		StartCoroutine("Arreglando");
 	}
 
 	IEnumerator Arreglando()
