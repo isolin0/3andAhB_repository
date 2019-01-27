@@ -137,6 +137,10 @@ public class PlayerController : MonoBehaviour
 
 			anim.SetBool("isJumping", false);
 			isGrounded = true;
-		}
+        }
+
+        
+
+
 	}
 }
