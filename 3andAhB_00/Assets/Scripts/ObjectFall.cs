@@ -35,7 +35,7 @@ public class ObjectFall : MonoBehaviour
             fallTime -= Time.deltaTime;
 		}
 
-        
+        //asd
 	}
 
     void fall()
