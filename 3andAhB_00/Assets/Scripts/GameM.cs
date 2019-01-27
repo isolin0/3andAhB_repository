@@ -17,10 +17,10 @@ public class GameM : MonoBehaviour
 
 	public Text countDownText;
 
-	int level = 1;
+	public int level;
 
 	public static GameM instance;
-
+	/*
 	void Awake()
 	{
 
@@ -37,7 +37,7 @@ public class GameM : MonoBehaviour
 		
 
 	}
-
+	*/
 	// Start is called before the first frame update
 	void Start()
     {
@@ -75,28 +75,31 @@ public class GameM : MonoBehaviour
 
 		if (startTimer <= 0 && hpMax >=1)
 		{
-			level+=1;
-			//Debug.Log("ganaste");
-			
-			SceneManager.LoadScene(level, LoadSceneMode.Single);
-			/*
-			if(level == 1)
+			if (level == 1)
 			{
-				level = 2;
+				
 				SceneManager.LoadScene(2, LoadSceneMode.Single);
 			}
-
 			if (level == 2)
 			{
-				level = 3;
+				
 				SceneManager.LoadScene(3, LoadSceneMode.Single);
 			}
 
 			if (level == 3)
 			{
-				level = 4;
+				
 				SceneManager.LoadScene(4, LoadSceneMode.Single);
 			}
+			/*
+			level+=1;
+			//Debug.Log("ganaste");
+			
+			SceneManager.LoadScene(level, LoadSceneMode.Single);
+			/*
+			
+
+			
 
 			*/
 
