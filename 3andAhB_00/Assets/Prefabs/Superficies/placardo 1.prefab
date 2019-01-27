@@ -76,27 +76,27 @@ PrefabInstance:
     - target: {fileID: 6028270043961508066, guid: 379a66956d1585c469509c569469d43f,
         type: 3}
       propertyPath: m_Points.Array.data[0].y
-      value: 0.47807547
+      value: 0.48302472
       objectReference: {fileID: 0}
     - target: {fileID: 6028270043961508066, guid: 379a66956d1585c469509c569469d43f,
         type: 3}
       propertyPath: m_Points.Array.data[0].x
-      value: 0.4571694
+      value: 0.3136425
       objectReference: {fileID: 0}
     - target: {fileID: 6028270043961508066, guid: 379a66956d1585c469509c569469d43f,
         type: 3}
       propertyPath: m_Points.Array.data[1].y
-      value: 0.4773889
+      value: 0.48092067
       objectReference: {fileID: 0}
     - target: {fileID: 6028270043961508066, guid: 379a66956d1585c469509c569469d43f,
         type: 3}
       propertyPath: m_Points.Array.data[1].x
-      value: -0.45650172
+      value: -0.31463552
       objectReference: {fileID: 0}
     - target: {fileID: 6028270043961508066, guid: 379a66956d1585c469509c569469d43f,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.16
+      value: -0.17
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 379a66956d1585c469509c569469d43f, type: 3}

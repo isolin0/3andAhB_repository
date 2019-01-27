@@ -162,11 +162,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 481b48e79f8d09b41b9b33be0a680aa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 1.5
   jumpForce: 8
   rb: {fileID: 754278676}
   anim: {fileID: 754278675}
-  extraJumpValue: 10
+  extraJumpValue: 0
 --- !u!61 &754278673
 BoxCollider2D:
   m_ObjectHideFlags: 0
