@@ -8,6 +8,9 @@ public class AudioManager : MonoBehaviour
 	public Sound[] sounds;
 
 	public static AudioManager instance;
+
+	public GameM gm;
+	bool startmusic;
 	// Start is called before the first frame update
 	void Awake()
 	{
@@ -33,9 +36,16 @@ public class AudioManager : MonoBehaviour
     }
     void Start()
     {
-        Play("intro");   
-    }
-    public void Play(string name)
+        Play("intro");
+		//gm.GetComponent<GameM>();
+		
+
+	}
+	private void Update()
+	{
+		
+	}
+	public void Play(string name)
 	{
 		Sound s = Array.Find(sounds, sound => sound.name == name);
 		if (s == null)

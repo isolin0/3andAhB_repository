@@ -41,22 +41,47 @@ public class GameM : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-        hpMax = startHP;
+		
+		hpMax = startHP;
         timerMax = startTimer;
-		FindObjectOfType<AudioManager>().Stop("intro");
-		FindObjectOfType<AudioManager>().Play("music");
+		
 		
 	}
 
     // Update is called once per frame
     void Update()
     {
+
 		Debug.Log("level : " + level);
-        startHP = hpMax;
+		Debug.Log("hp : " + hpMax);
+		startHP = hpMax;
         startTimer -= Time.deltaTime;
         timerMax -= Time.deltaTime;
 
-		if(countDownText!=null)
+		if (startTimer <= 1)
+		{
+			Debug.Log("esta entrando tiempo 0");
+			if (level == 1)
+			{
+
+				SceneManager.LoadScene(2, LoadSceneMode.Single);
+			}
+			if (level == 2)
+			{
+
+				SceneManager.LoadScene(3, LoadSceneMode.Single);
+			}
+
+			if (level == 3)
+			{
+
+				SceneManager.LoadScene(4, LoadSceneMode.Single);
+			}
+
+
+		}
+
+		if (countDownText!=null)
 		countDownText.text = startTimer.ToString("0");
         
         switch (hpMax){
@@ -73,37 +98,9 @@ public class GameM : MonoBehaviour
 				break;
         }
 
-		if (startTimer <= 0 && hpMax >=1)
-		{
-			if (level == 1)
-			{
-				
-				SceneManager.LoadScene(2, LoadSceneMode.Single);
-			}
-			if (level == 2)
-			{
-				
-				SceneManager.LoadScene(3, LoadSceneMode.Single);
-			}
+	
 
-			if (level == 3)
-			{
-				
-				SceneManager.LoadScene(4, LoadSceneMode.Single);
-			}
-			/*
-			level+=1;
-			//Debug.Log("ganaste");
-			
-			SceneManager.LoadScene(level, LoadSceneMode.Single);
-			/*
-			
-
-			
-
-			*/
-
-		}
+		
 
 
 

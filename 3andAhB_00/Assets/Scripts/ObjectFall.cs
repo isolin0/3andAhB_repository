@@ -67,7 +67,7 @@ public class ObjectFall : MonoBehaviour
             rb.gravityScale = 0;
             anim.SetBool("seRompe", true);
             FindObjectOfType<AudioManager>().Play("crash1");
-            GameM.hpMax--;
+            GameM.hpMax-=1;
         }
 
 
