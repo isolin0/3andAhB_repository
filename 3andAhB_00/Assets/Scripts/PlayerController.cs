@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
 		StopAllCoroutines();
 		yield return null;
 	}
-
+	/*
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
 		if (collision.gameObject.tag == "floor" || collision.gameObject.tag == "superficie")
@@ -129,5 +129,14 @@ public class PlayerController : MonoBehaviour
 		}
 			
 		
+	}*/
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.gameObject.tag == "floor" || collision.gameObject.tag == "superficie")
+		{
+
+			anim.SetBool("isJumping", false);
+			isGrounded = true;
+		}
 	}
 }
