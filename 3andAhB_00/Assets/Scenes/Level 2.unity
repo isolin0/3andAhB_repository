@@ -364,11 +364,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHP: 3
-  startTimer: 60
+  startTimer: 3
   corazon1: {fileID: 302077141}
   corazon2: {fileID: 302077140}
   corazon3: {fileID: 302077139}
   countDownText: {fileID: 1350319777}
+  level: 2
 --- !u!4 &118665326
 Transform:
   m_ObjectHideFlags: 0
