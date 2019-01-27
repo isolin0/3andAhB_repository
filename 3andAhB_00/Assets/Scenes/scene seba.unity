@@ -353,15 +353,45 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8344399301526529399, guid: 0a4cd424bc0f8924492374cbf1c18624,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.08309072
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344399301526529399, guid: 0a4cd424bc0f8924492374cbf1c18624,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.15030515
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344399301526529398, guid: 0a4cd424bc0f8924492374cbf1c18624,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344399301526529398, guid: 0a4cd424bc0f8924492374cbf1c18624,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344399301526529398, guid: 0a4cd424bc0f8924492374cbf1c18624,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344399301526529396, guid: 0a4cd424bc0f8924492374cbf1c18624,
+        type: 3}
+      propertyPath: extraJumpValue
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1153983790890161230, guid: 0a4cd424bc0f8924492374cbf1c18624,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.15674692
+      value: -0.18995708
       objectReference: {fileID: 0}
     - target: {fileID: 1153983790890161230, guid: 0a4cd424bc0f8924492374cbf1c18624,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.0087634325
+      value: 0.07518375
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a4cd424bc0f8924492374cbf1c18624, type: 3}

@@ -137,7 +137,6 @@ public class PlayerController : MonoBehaviour
 
 			anim.SetBool("isJumping", false);
 			isGrounded = true;
-            rb.velocity = Vector2.zero;
         }
 
         
