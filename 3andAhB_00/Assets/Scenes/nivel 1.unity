@@ -604,6 +604,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5701001ab3999d14389868f5020ade88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startHP: 3
+  startTimer: 60
 --- !u!4 &570077885
 Transform:
   m_ObjectHideFlags: 0
@@ -736,7 +738,7 @@ GameObject:
   - component: {fileID: 827211574}
   m_Layer: 8
   m_Name: Sprite (1)
-  m_TagString: floor
+  m_TagString: superficie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1724,7 +1726,7 @@ MonoBehaviour:
   - {fileID: 754400617}
   - {fileID: 1082039412}
   - {fileID: 70145279}
-  catPrefab: {fileID: 7444473665146508377, guid: 94d269476bc62214a85b90977a227802,
+  catPrefab: {fileID: 5858701281711387282, guid: 5bc1a098ca747ff4ab7184ddf30cd685,
     type: 3}
   startTimeBtwMove: 3
   stopCatSpawn: 0
@@ -1782,7 +1784,7 @@ PrefabInstance:
     - target: {fileID: 6028270043961508069, guid: 379a66956d1585c469509c569469d43f,
         type: 3}
       propertyPath: m_TagString
-      value: floor
+      value: superficie
       objectReference: {fileID: 0}
     - target: {fileID: 6028270043961508068, guid: 379a66956d1585c469509c569469d43f,
         type: 3}
