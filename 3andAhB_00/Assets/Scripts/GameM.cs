@@ -17,14 +17,35 @@ public class GameM : MonoBehaviour
 
 	public Text countDownText;
 
+	int level = 1;
 
+	public static GameM instance;
 
-    // Start is called before the first frame update
-    void Start()
+	void Awake()
+	{
+
+		if (instance == null)
+			instance = this;
+		else
+		{
+			Destroy(gameObject);
+			return;
+		}
+
+		DontDestroyOnLoad(gameObject);
+
+		
+
+	}
+
+	// Start is called before the first frame update
+	void Start()
     {
         hpMax = startHP;
         timerMax = startTimer;
+		FindObjectOfType<AudioManager>().Stop("intro");
 		FindObjectOfType<AudioManager>().Play("music");
+		
 	}
 
     // Update is called once per frame
@@ -46,6 +67,7 @@ public class GameM : MonoBehaviour
                 break;
             case 0:
                 Destroy(corazon1.gameObject);
+	
 				SceneManager.LoadScene(4, LoadSceneMode.Single);
 				break;
         }
@@ -53,7 +75,8 @@ public class GameM : MonoBehaviour
 		if (startTimer <= 0 && hpMax >=1)
 		{
 			//Debug.Log("ganaste");
-			SceneManager.LoadScene(5, LoadSceneMode.Single);
+			level++;
+			SceneManager.LoadScene(level, LoadSceneMode.Single);
 		}
 			
 

@@ -18,7 +18,13 @@ public class menuMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		FindObjectOfType<AudioManager>().Play("intro");
+		//FindObjectOfType<AudioManager>().Play("intro");
+		if(winMenu)
+			FindObjectOfType<AudioManager>().Play("win");
+		
+		if(gameOver)
+			FindObjectOfType<AudioManager>().Play("lose");
+
 	}
 
     // Update is called once per frame
