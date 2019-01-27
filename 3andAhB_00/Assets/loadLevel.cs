@@ -5,8 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class loadLevel : MonoBehaviour
 {
-	public void Load( int sceneNumber)
+    
+    
+
+
+    public void Load( int sceneNumber)
 	{
 		SceneManager.LoadScene(sceneNumber,LoadSceneMode.Single);
 	}
+
+
 }
+

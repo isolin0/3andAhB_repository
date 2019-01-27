@@ -39,6 +39,7 @@ public class GameM : MonoBehaviour
                 break;
             case 0:
                 Destroy(corazon1.gameObject);
+
                 break;
         }
 

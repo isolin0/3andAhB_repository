@@ -9,6 +9,8 @@ TagManager:
   - dog
   - floor
   - superficie
+  - arrowPos1
+  - arrowPos2
   layers:
   - Default
   - TransparentFX
