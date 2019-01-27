@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameM : MonoBehaviour
 {
@@ -39,10 +40,17 @@ public class GameM : MonoBehaviour
                 break;
             case 0:
                 Destroy(corazon1.gameObject);
-
-                break;
+				SceneManager.LoadScene(2, LoadSceneMode.Single);
+				break;
         }
 
+		if (startTimer <= 0 && hpMax >=1)
+		{
+			Debug.Log("ganaste");
+			SceneManager.LoadScene(3, LoadSceneMode.Single);
+		}
+			
 
-    }
+
+	}
 }

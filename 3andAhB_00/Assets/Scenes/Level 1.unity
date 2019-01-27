@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHP: 3
-  startTimer: 60
+  startTimer: 30
   corazon1: {fileID: 302077141}
   corazon2: {fileID: 302077140}
   corazon3: {fileID: 302077139}

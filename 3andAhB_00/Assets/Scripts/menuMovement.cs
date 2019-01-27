@@ -10,6 +10,9 @@ public class menuMovement : MonoBehaviour
 
 	public GameObject creditos;
 
+	public bool winMenu;
+	public bool gameOver;
+
 	private int moveAmount = 0;
 
     // Start is called before the first frame update
@@ -50,5 +53,24 @@ public class menuMovement : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Escape))
 			creditos.SetActive(false);
 
+		if (winMenu)
+		{
+			if (Input.GetKeyDown(KeyCode.Return))
+				SceneManager.LoadScene(0, LoadSceneMode.Single);
+
+		}
+
+		if (gameOver)
+		{
+			if (Input.GetKeyDown(KeyCode.Return))
+				SceneManager.LoadScene(0, LoadSceneMode.Single);
+
+		}
+
+	}
+
+	public void MainMenu()
+	{
+		SceneManager.LoadScene(0, LoadSceneMode.Single);
 	}
 }
