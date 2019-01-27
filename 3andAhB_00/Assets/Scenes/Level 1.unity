@@ -112,6 +112,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &36099004 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2408787902610687251, guid: 814190b4eb82fd74a8e2cddbcf75cb3f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2408787902622408673}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &99305172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -186,11 +198,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 63079749, guid: 557618e431fa98a42835cdefc265a7e6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.03
+      value: 0.005
       objectReference: {fileID: 0}
     - target: {fileID: 63079749, guid: 557618e431fa98a42835cdefc265a7e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.133
+      value: 0.148
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 557618e431fa98a42835cdefc265a7e6, type: 3}
@@ -308,7 +320,7 @@ MonoBehaviour:
   corazon1: {fileID: 302077141}
   corazon2: {fileID: 302077140}
   corazon3: {fileID: 302077139}
-  countDownText: {fileID: 0}
+  countDownText: {fileID: 36099004}
 --- !u!4 &118665326
 Transform:
   m_ObjectHideFlags: 0
@@ -665,7 +677,7 @@ PrefabInstance:
     - target: {fileID: 5231772242247165001, guid: 12b679d7a89d2de4f9bfdc84b8e6ead6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.6081907
+      value: -1.569
       objectReference: {fileID: 0}
     - target: {fileID: 5231772242247165001, guid: 12b679d7a89d2de4f9bfdc84b8e6ead6,
         type: 3}
@@ -724,7 +736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 63079749, guid: 12b679d7a89d2de4f9bfdc84b8e6ead6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.096
+      value: -0.155
       objectReference: {fileID: 0}
     - target: {fileID: 63079749, guid: 12b679d7a89d2de4f9bfdc84b8e6ead6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -847,7 +859,7 @@ PrefabInstance:
     - target: {fileID: 5231772242247165001, guid: 2c66c78fd90ab7e48bbe8518f09b22bb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.295
+      value: 2.256
       objectReference: {fileID: 0}
     - target: {fileID: 5231772242247165001, guid: 2c66c78fd90ab7e48bbe8518f09b22bb,
         type: 3}
@@ -906,11 +918,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 63079749, guid: 2c66c78fd90ab7e48bbe8518f09b22bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.046
+      value: -0.001
       objectReference: {fileID: 0}
     - target: {fileID: 63079749, guid: 2c66c78fd90ab7e48bbe8518f09b22bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.012
+      value: 0.146
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c66c78fd90ab7e48bbe8518f09b22bb, type: 3}
@@ -1255,11 +1267,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 63079749, guid: ecb4581a9c28b4743a154096aa274c34, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.052
+      value: 0.102
       objectReference: {fileID: 0}
     - target: {fileID: 63079749, guid: ecb4581a9c28b4743a154096aa274c34, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.035
+      value: -0.002
       objectReference: {fileID: 0}
     - target: {fileID: 5231772242247165001, guid: ecb4581a9c28b4743a154096aa274c34,
         type: 3}
@@ -1738,11 +1750,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 63079749, guid: 5530fdbc091745c4cade0994a25047d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.054
+      value: -0.014
       objectReference: {fileID: 0}
     - target: {fileID: 63079749, guid: 5530fdbc091745c4cade0994a25047d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.053
+      value: 0.127
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5530fdbc091745c4cade0994a25047d1, type: 3}
