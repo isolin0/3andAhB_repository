@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (collision.gameObject.tag == "floor")
+		if (collision.gameObject.tag == "floor" || collision.gameObject.tag == "superficie")
 		{
 			
 			anim.SetBool("isJumping", false);
