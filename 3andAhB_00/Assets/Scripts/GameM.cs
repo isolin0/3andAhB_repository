@@ -52,15 +52,15 @@ public class GameM : MonoBehaviour
     void Update()
     {
 
-		Debug.Log("level : " + level);
-		Debug.Log("hp : " + hpMax);
+		//Debug.Log("level : " + level);
+		//Debug.Log("hp : " + hpMax);
 		startHP = hpMax;
         startTimer -= Time.deltaTime;
         timerMax -= Time.deltaTime;
 
 		if (startTimer <= 1)
 		{
-			Debug.Log("esta entrando tiempo 0");
+			//Debug.Log("esta entrando tiempo 0");
 			if (level == 1)
 			{
 

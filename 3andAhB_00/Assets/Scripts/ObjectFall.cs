@@ -40,7 +40,7 @@ public class ObjectFall : MonoBehaviour
 
     void fall()
     {
-		FindObjectOfType<PlayerController>().SeAsusta();
+		//FindObjectOfType<PlayerController>().SeAsusta();
         rb.gravityScale = 1;
         anim.SetBool("seCae", true);
 
@@ -67,7 +67,8 @@ public class ObjectFall : MonoBehaviour
             rb.gravityScale = 0;
             anim.SetBool("seRompe", true);
             FindObjectOfType<AudioManager>().Play("crash1");
-            GameM.hpMax-=1;
+			FindObjectOfType<PlayerController>().SeAsusta();
+			GameM.hpMax-=1;
         }
 
 

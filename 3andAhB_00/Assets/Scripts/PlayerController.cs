@@ -93,8 +93,9 @@ public class PlayerController : MonoBehaviour
 	{
 		seAsusta = true;
 		rb.velocity = Vector2.zero;
-		anim.SetBool("seAsusta", true);
 		StartCoroutine("Asustado");
+		anim.SetBool("seAsusta", true);
+		
 	}
 
 	public void Arregla()
