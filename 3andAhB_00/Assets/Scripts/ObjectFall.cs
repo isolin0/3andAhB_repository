@@ -66,7 +66,7 @@ public class ObjectFall : MonoBehaviour
         {
             rb.gravityScale = 0;
             anim.SetBool("seRompe", true);
-            // FindObjectOfType<AudioManager>().Play("objetoRompe");
+            FindObjectOfType<AudioManager>().Play("crash1");
             GameM.hpMax--;
         }
 
@@ -76,7 +76,8 @@ public class ObjectFall : MonoBehaviour
     IEnumerator GatoToca()
     {
         yield return new WaitForSeconds(0.7f);
-        anim.SetBool("seMueve", true);
+		FindObjectOfType<AudioManager>().Play("empujar");
+		anim.SetBool("seMueve", true);
         isMoving = true;
         // start fall timer
         fallTime = startFallTime;
@@ -91,6 +92,7 @@ public class ObjectFall : MonoBehaviour
         if (col.tag == "dog" && Input.GetKeyDown(KeyCode.X))
         {
 			FindObjectOfType<PlayerController>().Arregla();
+			FindObjectOfType<AudioManager>().Play("acomodar");
 			isMoving = false;
             anim.SetBool("seMueve", false);
             anim.SetBool("arregla", false);
