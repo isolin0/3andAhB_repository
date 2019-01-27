@@ -68,7 +68,7 @@ public class GameM : MonoBehaviour
             case 0:
                 Destroy(corazon1.gameObject);
 	
-				SceneManager.LoadScene(4, LoadSceneMode.Single);
+				SceneManager.LoadScene(5, LoadSceneMode.Single);
 				break;
         }
 
