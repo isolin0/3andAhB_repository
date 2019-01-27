@@ -40,6 +40,7 @@ public class ObjectFall : MonoBehaviour
 
     void fall()
     {
+		FindObjectOfType<PlayerController>().SeAsusta();
         rb.gravityScale = 1;
         anim.SetBool("seCae", true);
 

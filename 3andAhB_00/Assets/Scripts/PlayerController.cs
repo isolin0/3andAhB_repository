@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
 	public float checkRadius;
 	public LayerMask whatIsGround;
 
+	private bool seAsusta =false;
+
 	private int extraJump;
 	public int extraJumpValue;
     // Start is called before the first frame update
@@ -34,20 +36,25 @@ public class PlayerController : MonoBehaviour
 			extraJump = extraJumpValue;
 			
 		}
-		if(Input.GetKeyDown(KeyCode.UpArrow)&& extraJump > 0)
+		if (!seAsusta)
 		{
-			anim.SetBool("isJumping", true);
-			isGrounded = false;
-			rb.velocity = Vector2.up * jumpForce;
-			
-			extraJump--;
-		}else if (Input.GetKeyDown(KeyCode.UpArrow) && extraJump == 0 && isGrounded==true)
-		{
-			anim.SetBool("isJumping", true);
-			isGrounded = false;
-			rb.velocity = Vector2.up * jumpForce;
-			
+			if (Input.GetKeyDown(KeyCode.UpArrow) && extraJump > 0)
+			{
+				anim.SetBool("isJumping", true);
+				isGrounded = false;
+				rb.velocity = Vector2.up * jumpForce;
+
+				extraJump--;
+			}
+			else if (Input.GetKeyDown(KeyCode.UpArrow) && extraJump == 0 && isGrounded == true)
+			{
+				anim.SetBool("isJumping", true);
+				isGrounded = false;
+				rb.velocity = Vector2.up * jumpForce;
+
+			}
 		}
+		
 	}
 
 
@@ -56,10 +63,13 @@ public class PlayerController : MonoBehaviour
     {
 
 		//isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-
-		moveInput = Input.GetAxis("Horizontal");
-		anim.SetFloat("speed", Mathf.Abs(moveInput * speed));
-		rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+		if (!seAsusta)
+		{
+			moveInput = Input.GetAxis("Horizontal");
+			anim.SetFloat("speed", Mathf.Abs(moveInput * speed));
+			rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+		}
+		
 
 		if(facingRight== false && moveInput > 0)
 		{
@@ -79,6 +89,22 @@ public class PlayerController : MonoBehaviour
 	
 	}
 	
+	public void SeAsusta()
+	{
+		seAsusta = true;
+		rb.velocity = Vector2.zero;
+		anim.SetBool("seAsusta", true);
+		StartCoroutine("Asustado");
+	}
+
+	IEnumerator Asustado()
+	{
+		yield return new WaitForSeconds(1);
+		seAsusta = false;
+		anim.SetBool("seAsusta", false);
+		StopAllCoroutines();
+		yield return null;
+	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
