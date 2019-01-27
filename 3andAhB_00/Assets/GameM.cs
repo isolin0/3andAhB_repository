@@ -20,6 +20,10 @@ public class GameM : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-                                
+        startHP = hpMax;
+        startTimer -= Time.deltaTime;
+        timerMax -= Time.deltaTime; 
+        
+
     }
 }
