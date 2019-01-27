@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameM : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class GameM : MonoBehaviour
     public Transform corazon2;
     public Transform corazon3;
 
+	public Text countDownText;
 
 
 
@@ -29,7 +31,9 @@ public class GameM : MonoBehaviour
     {
         startHP = hpMax;
         startTimer -= Time.deltaTime;
-        timerMax -= Time.deltaTime; 
+        timerMax -= Time.deltaTime;
+
+		countDownText.text = startTimer.ToString("0");
         
         switch (hpMax){
             case 2:
