@@ -58,11 +58,8 @@ public class ObjectFall : MonoBehaviour
 	{
 		if(col.tag == "cat")
 		{
-            // start moving anim
-            anim.SetBool("seMueve", true);
-            isMoving = true;
-            // start fall timer
-            fallTime = startFallTime;
+            StartCoroutine("GatoToca");
+            
         }
 
 		if(col.tag == "floor")
@@ -75,6 +72,17 @@ public class ObjectFall : MonoBehaviour
 
 
 	}
+
+    IEnumerator GatoToca()
+    {
+        yield return new WaitForSeconds(0.7f);
+        anim.SetBool("seMueve", true);
+        isMoving = true;
+        // start fall timer
+        fallTime = startFallTime;
+        StopAllCoroutines();
+        yield return null;
+    }
 
     void OnTriggerStay2D(Collider2D col)
     {

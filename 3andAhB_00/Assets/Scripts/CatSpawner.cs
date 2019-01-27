@@ -20,14 +20,30 @@ public class CatSpawner : MonoBehaviour
 	//private float timeOff;
 	//public float startTimeOff = 3f;
 	public bool stopCatSpawn;
-	void Start()
+
+    private bool startSpawner = true;
+
+    
+	private void Start()
 	{
-		
+        StartCoroutine("StartSpawner");
+       
 	}
 
+    IEnumerator StartSpawner()
+    {
+       
+        yield return new WaitForSeconds(3);
+        Debug.Log("pasa que entra el rutina");
+        startSpawner = false;
+        StopAllCoroutines();
+        yield return null;
+        
+    }
+    
 	void Update()
 	{
-		if (timeBtwMove <= 0 && stopCatSpawn == false)
+		if (timeBtwMove <= 0 && stopCatSpawn == false && startSpawner == false)
 		{
 			
 			SpawnCat();
@@ -39,7 +55,7 @@ public class CatSpawner : MonoBehaviour
 			timeBtwMove -= Time.deltaTime;
 		}
 
-
+    
 	}
 
 	
@@ -47,7 +63,7 @@ public class CatSpawner : MonoBehaviour
 	private void SpawnCat()
 	{
 		int rand = Random.Range(0,3);
-
+        
 		switch (rand)
 		{
 			case 0:
