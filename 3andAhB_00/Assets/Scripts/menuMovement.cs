@@ -30,7 +30,13 @@ public class menuMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if(moveAmount == 0)
+		if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Return))
+		{
+			creditos.SetActive(false);
+		}
+			
+
+		if (moveAmount == 0)
 		{
 			if (Input.GetKeyDown(KeyCode.DownArrow))
 			{
@@ -56,8 +62,7 @@ public class menuMovement : MonoBehaviour
 				creditos.SetActive(true);
 		}
 
-		if (Input.GetKeyDown(KeyCode.Escape))
-			creditos.SetActive(false);
+		
 
 		if (winMenu)
 		{

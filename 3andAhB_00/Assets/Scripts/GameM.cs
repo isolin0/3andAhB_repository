@@ -51,6 +51,7 @@ public class GameM : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		Debug.Log("level : " + level);
         startHP = hpMax;
         startTimer -= Time.deltaTime;
         timerMax -= Time.deltaTime;
@@ -74,11 +75,33 @@ public class GameM : MonoBehaviour
 
 		if (startTimer <= 0 && hpMax >=1)
 		{
+			level+=1;
 			//Debug.Log("ganaste");
-			level++;
-			SceneManager.LoadScene(level, LoadSceneMode.Single);
-		}
 			
+			SceneManager.LoadScene(level, LoadSceneMode.Single);
+			/*
+			if(level == 1)
+			{
+				level = 2;
+				SceneManager.LoadScene(2, LoadSceneMode.Single);
+			}
+
+			if (level == 2)
+			{
+				level = 3;
+				SceneManager.LoadScene(3, LoadSceneMode.Single);
+			}
+
+			if (level == 3)
+			{
+				level = 4;
+				SceneManager.LoadScene(4, LoadSceneMode.Single);
+			}
+
+			*/
+
+		}
+
 
 
 	}
