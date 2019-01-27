@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour
 
 	IEnumerator Arreglando()
 	{
-		yield return new WaitForSeconds(1);
+		yield return new WaitForSeconds(0.5f);
 		anim.SetBool("arregla", false);
 		StopAllCoroutines();
 		yield return null;

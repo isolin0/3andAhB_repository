@@ -85,6 +85,7 @@ public class ObjectFall : MonoBehaviour
 			FindObjectOfType<PlayerController>().Arregla();
 			isMoving = false;
             anim.SetBool("seMueve", false);
+            anim.SetBool("arregla", false);
         }
 
         if(col.tag == "floor")

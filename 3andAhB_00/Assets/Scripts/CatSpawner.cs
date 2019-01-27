@@ -14,7 +14,8 @@ public class CatSpawner : MonoBehaviour
 
 
 	private GameObject catCopy;
-	private float timeBtwMove;
+
+    private float timeBtwMove;
 	public float startTimeBtwMove = 3f;
 	//private float timeOff;
 	//public float startTimeOff = 3f;
@@ -54,7 +55,7 @@ public class CatSpawner : MonoBehaviour
 				if (startPosition[randStartPosition].position != null)
 				{
 
-					transform.position = startPosition2[randStartPosition].position;
+					transform.position = startPosition[randStartPosition].position;
 
 					catCopy = GameObject.Instantiate(catPrefab, transform.position, Quaternion.identity) as GameObject;
 					StartCoroutine("CatAnimation");
@@ -64,8 +65,8 @@ public class CatSpawner : MonoBehaviour
 				break;
 
 			case 1:
-				int randStartPosition2 = Random.Range(0, startPosition.Length);
-				if (startPosition[randStartPosition2].position != null)
+				int randStartPosition2 = Random.Range(0, startPosition2.Length);
+				if (startPosition2[randStartPosition2].position != null)
 				{
 
 					transform.position = startPosition2[randStartPosition2].position;
@@ -78,8 +79,8 @@ public class CatSpawner : MonoBehaviour
 				break;
 
 			case 2:
-				int randStartPosition3 = Random.Range(0, startPosition.Length);
-				if (startPosition[randStartPosition3].position != null)
+				int randStartPosition3 = Random.Range(0, startPosition3.Length);
+				if (startPosition3[randStartPosition3].position != null)
 				{
 
 					transform.position = startPosition3[randStartPosition3].position;
