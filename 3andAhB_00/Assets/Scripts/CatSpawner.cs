@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class CatSpawner : MonoBehaviour
 {
-	public Transform[] startPosition;
-	public GameObject catPrefab;
+	public Transform[] startPosition; // esta es para las que el gato esta de frente
+	public Transform[] startPosition2; // caundo el gato esta de derecha
+	public Transform[] startPosition3; // y de izquierda
+
+	public GameObject catPrefab; // frente
+	public GameObject catPrefab2; // derecha
+	public GameObject catPrefab3; // izquierda
+
 
 	private GameObject catCopy;
 	private float timeBtwMove;
@@ -39,17 +45,54 @@ public class CatSpawner : MonoBehaviour
 
 	private void SpawnCat()
 	{
-		int randStartPosition = Random.Range(0, startPosition.Length);
-        if(startPosition[randStartPosition].position != null)
-        {
+		int rand = Random.Range(0,3);
 
-            transform.position = startPosition[randStartPosition].position;
-        
-            catCopy = GameObject.Instantiate(catPrefab, transform.position, Quaternion.identity) as GameObject;
-            StartCoroutine("CatAnimation");
-        }
-        else 
-            SpawnCat();
+		switch (rand)
+		{
+			case 0:
+				int randStartPosition = Random.Range(0, startPosition.Length);
+				if (startPosition[randStartPosition].position != null)
+				{
+
+					transform.position = startPosition2[randStartPosition].position;
+
+					catCopy = GameObject.Instantiate(catPrefab, transform.position, Quaternion.identity) as GameObject;
+					StartCoroutine("CatAnimation");
+				}
+				else
+					SpawnCat();
+				break;
+
+			case 1:
+				int randStartPosition2 = Random.Range(0, startPosition.Length);
+				if (startPosition[randStartPosition2].position != null)
+				{
+
+					transform.position = startPosition2[randStartPosition2].position;
+
+					catCopy = GameObject.Instantiate(catPrefab2, transform.position, Quaternion.identity) as GameObject;
+					StartCoroutine("CatAnimation");
+				}
+				else
+					SpawnCat();
+				break;
+
+			case 2:
+				int randStartPosition3 = Random.Range(0, startPosition.Length);
+				if (startPosition[randStartPosition3].position != null)
+				{
+
+					transform.position = startPosition3[randStartPosition3].position;
+
+					catCopy = GameObject.Instantiate(catPrefab3, transform.position, Quaternion.identity) as GameObject;
+					StartCoroutine("CatAnimation");
+				}
+				else
+					SpawnCat();
+				break;
+		}
+		
+		
             
 
 	}
