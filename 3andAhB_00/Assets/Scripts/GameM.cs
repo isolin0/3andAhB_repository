@@ -24,7 +24,8 @@ public class GameM : MonoBehaviour
     {
         hpMax = startHP;
         timerMax = startTimer;
-    }
+		FindObjectOfType<AudioManager>().Play("music");
+	}
 
     // Update is called once per frame
     void Update()
@@ -33,6 +34,7 @@ public class GameM : MonoBehaviour
         startTimer -= Time.deltaTime;
         timerMax -= Time.deltaTime;
 
+		if(countDownText!=null)
 		countDownText.text = startTimer.ToString("0");
         
         switch (hpMax){
