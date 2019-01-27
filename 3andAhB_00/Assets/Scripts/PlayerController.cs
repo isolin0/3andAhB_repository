@@ -15,9 +15,9 @@ public class PlayerController : MonoBehaviour
 	private bool facingRight = true;
 
 	private bool isGrounded;
-	public Transform groundCheck;
-	public float checkRadius;
-	public LayerMask whatIsGround;
+	//public Transform groundCheck;
+	//public float checkRadius;
+	//public LayerMask whatIsGround;
 
 	private bool seAsusta =false;
 
@@ -95,6 +95,19 @@ public class PlayerController : MonoBehaviour
 		rb.velocity = Vector2.zero;
 		anim.SetBool("seAsusta", true);
 		StartCoroutine("Asustado");
+	}
+
+	public void Arregla()
+	{
+		anim.SetBool("arregla", true);
+	}
+
+	IEnumerator Arreglando()
+	{
+		yield return new WaitForSeconds(1);
+		anim.SetBool("arregla", false);
+		StopAllCoroutines();
+		yield return null;
 	}
 
 	IEnumerator Asustado()

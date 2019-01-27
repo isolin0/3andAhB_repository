@@ -81,8 +81,8 @@ public class ObjectFall : MonoBehaviour
 
         if (col.tag == "dog" && Input.GetKeyDown(KeyCode.X))
         {
-            //stop moving anim
-            isMoving = false;
+			FindObjectOfType<PlayerController>().Arregla();
+			isMoving = false;
             anim.SetBool("seMueve", false);
         }
 
