@@ -9,11 +9,15 @@ public class ObjectFall : MonoBehaviour
 	public bool isMoving = false;
     private Rigidbody2D rb;
 
-    private void Start()
+	public Animator anim;
+	//anim.SetBool("nombre del parametro",true);
+
+	private void Start()
     {
         fallTime = startFallTime;
         rb = GetComponent<Rigidbody2D>();
-        
+		
+		
     }
     void Update()
 	{
